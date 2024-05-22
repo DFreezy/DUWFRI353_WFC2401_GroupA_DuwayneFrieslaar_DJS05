@@ -1,12 +1,15 @@
-import {incrementQuantity, selectItem} from "./store.js"
+import "./store";
 
-selectItem(item) 
-    this.selectItem = item;
-    console.log(`Selected item: ${item}`);
-  
+const INCREMENT = 'INCREMENT';
+const SAVE = 'SAVE';
 
-  incrementQuantity() 
-    this.itemQuantity++;
-    console.log(`Item quantity incremented: ${this.itemQuantity}`);
-  
+function increment() {
+  return { type: INCREMENT };
+}
 
+function save() {
+  return { type: SAVE };
+}
+
+document.getElementById('increment-btn').addEventListener('click', () => store.dispatch(increment()));
+document.getElementById('save-btn').addEventListener('click', () => store.dispatch(save()));

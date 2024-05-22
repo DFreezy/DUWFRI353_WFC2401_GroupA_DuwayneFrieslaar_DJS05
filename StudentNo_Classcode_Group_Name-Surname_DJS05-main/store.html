@@ -1,17 +1,20 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="Counter app.css">
-    </head>
-    <body>
-        <div class="container">
-            <h1>Row Counter</h1>
-            <h2 id="count-el">0</h2>
-            <button id="increment-btn" onclick="increment()">INCREMENT</button>
-            <button id="save-btn" onclick="save()">SAVE</button>
-            <p id="save-el">Previous entries: </p>
-        </div>
-        <script src="store.js">
-            nnerText
-        </script>
-    </body>
+<head>
+    <title>Store Example</title>
+</head>
+<body>
+    <div>
+        <h1>Count: <span id="count-el">0</span></h1>
+        <button id="increment-btn">Increment</button>
+        <button id="save-btn">Save</button>
+    </div>
+    <div>
+        <h2>Saved Counts: <span id="save-el"></span></h2>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.1.2/redux.min.js"></script>
+    <!--<script type="module" src="Action.js"></script>-->
+    <!--<script type= "module"src="Reducer.js"></script>-->
+    <script type="module" src="store.js"></script>
+</body>
 </html>

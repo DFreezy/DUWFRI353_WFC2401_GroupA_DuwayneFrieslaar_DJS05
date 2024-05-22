@@ -1,10 +1,12 @@
-import {decrementQuantity} from "./store";
+import  "./store";
 
-decrementQuantity() 
-    if (this.itemQuantity > 6) {
-      this.itemQuantity--;
-      console.log(`Item quantity decremented: ${this.itemQuantity}`);
-    } else {
-      console.log("Item quantity cannot be less than zero.");
-    }
-  
+function counterReducer(state = initialState, action) {
+  switch (action.type) {
+      case INCREMENT:
+          return { ...state, count: state.count + 1 };
+      case SAVE:
+          return { ...state, savedCounts: [...state.savedCounts, state.count], count: 0 };
+      default:
+          return state;
+  }
+}
