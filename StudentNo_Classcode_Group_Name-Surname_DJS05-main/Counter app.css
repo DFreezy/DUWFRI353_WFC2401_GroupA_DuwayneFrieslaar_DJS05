@@ -22,7 +22,7 @@ button {
     border: none;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: white;
+    color: rgb(7, 0, 0);
     font-weight: bold;
     width: 200px;
     margin-bottom: 5px;
@@ -33,6 +33,7 @@ button {
     background: darkred;
 }
 
-#save-btn {
+#reset-btn {
     background: darkgreen;
+    color: black;
 }

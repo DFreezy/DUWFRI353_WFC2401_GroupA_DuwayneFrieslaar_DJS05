@@ -5,19 +5,19 @@ const RESET = 'RESET';
 const SAVE = 'SAVE';
 
 // Action Creators
-export function increment() {
+function increment() {
     return { type: INCREMENT };
 }
 
-export function decrement() {
+function decrement() {
     return { type: DECREMENT };
 }
 
-export function reset() {
+function reset() {
     return { type: RESET };
 }
 
-export function save() {
+function save() {
     return { type: SAVE };
 }
 
@@ -28,7 +28,7 @@ const initialState = {
 };
 
 // Reducer
-export function counterReducer(state = initialState, action) {
+ function counterReducer(state = initialState, action) {
     switch (action.type) {
         case INCREMENT:
             return { ...state, count: state.count + 1 };
@@ -49,7 +49,7 @@ const store = createStore(counterReducer);
 
 // DOM Elements
 const countEl = document.getElementById('count-el');
-const saveEl = document.getElementById('save-el');
+const saveEl = document.getElementById('reset-btn');
 
 // Render function
 function render() {
@@ -66,7 +66,8 @@ store.subscribe(render);
 
 // Event Listeners
 document.getElementById('increment-btn').addEventListener('click', () => store.dispatch(increment()));
-document.getElementById('save-btn').addEventListener('click', () => store.dispatch(save()));
+document.getElementById('reset-btn').addEventListener('click', () => store.dispatch(reset()));
+document.getElementById('decrement-btn').addEventListener('click', () => store.dispatch(decrement()))
 
 // Testing the scenarios
 console.log(store.getState()); // Scenario: Initial state
