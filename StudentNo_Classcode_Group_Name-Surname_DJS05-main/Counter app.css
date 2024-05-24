@@ -18,22 +18,23 @@ h2 {
     margin-bottom: 20px;
 }
 
-button {
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: rgb(7, 0, 0);
-    font-weight: bold;
-    width: 200px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
 
 #increment-btn {
-    background: darkred;
+    background: rgb(23, 139, 0);
+    width: 100px;
+    height: 35px;
 }
 
 #reset-btn {
-    background: darkgreen;
+    background: orangered;
     color: black;
+    Width: 100px;
+    height: 35px;
 }
+
+#decrement-btn {
+    background: darkred;
+    width: 100px;
+    height: 35px;   
+}
+
