@@ -40,9 +40,6 @@ function reset() {
  * Action creator for saving the count.
  * @returns {Object} Action object for saving.
  */
-function save() {
-    return { type: SAVE };
-}
 
 /**
  * Initial State
